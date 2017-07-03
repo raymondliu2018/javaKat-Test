@@ -1,0 +1,9 @@
+1. Open Terminal.
+
+2. Set current directory to Download Me.
+
+3. Run javac -cp javaKat.jar workspace/*.java
+
+4. Run jar cfvm GAME_TITLE.jar Manifest.txt javaKat.jar workspace/*.class images/* sounds/*
+
+5. Encapsulate these files within a folder
