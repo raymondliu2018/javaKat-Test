@@ -8,6 +8,7 @@ public class Paddle extends Entity {
         Album album = new Album(this);
         album.addPageWithPicture("images/Paddle.png","main");
         album.setPage("main");
+        album.setMovementMode(MovementMode.BY_RECT);
         
         bindCodeToAction("up",
                 (a) -> {rect.offsetYVelocityBy(-5.0);},
