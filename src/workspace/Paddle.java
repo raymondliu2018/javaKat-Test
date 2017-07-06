@@ -23,5 +23,6 @@ public class Paddle extends Entity {
     
     public void subUpdate() {
     }
+    
 }
     
