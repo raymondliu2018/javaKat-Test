@@ -41,10 +41,17 @@ public class Script implements SuperScript {
         
         rightPlayerScoreTag = new Tag();
         rightPlayerScoreTag.setColor(Color.GREEN);
-        rightPlayerScoreTag.setMessage(() -> {return Integer.toString(leftPlayerScoreInt);});
+        rightPlayerScoreTag.setMessage(() -> {return Integer.toString(rightPlayerScoreInt);});
         rightPlayerScoreTag.setMovementMode(MovementMode.BY_INPUT);
         rightPlayerScoreTag.setCenterX(GameMaster.getWidth()/4);
         rightPlayerScoreTag.setCenterY(GameMaster.getHeight()/2);
+        
+        Border top = new Border();
+        top.getRect().setCornerY(-top.getRect().getHeight());
+        
+        Border bot = new Border();
+        bot.getRect().setCornerY(bot.getRect().getHeight());
+        
     }
     
     public static void main(String [] args) {
@@ -55,6 +62,8 @@ public class Script implements SuperScript {
     }
     
     public static void end() {
+        GameRestarter.wipeAllEntities();
+        GameRestarter.start();
     }
 }
 

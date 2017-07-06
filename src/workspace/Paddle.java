@@ -24,5 +24,15 @@ public class Paddle extends Entity {
     public void subUpdate() {
     }
     
+    public Reaction collidedWith(Entity input) {
+        if (input instanceof Ball) {
+            return Reaction.REFLECT;
+        }
+        if (input instanceof Border) {
+            return Reaction.DEFLECT;
+        }
+        return Reaction.AGREE;
+    }
+    
 }
     

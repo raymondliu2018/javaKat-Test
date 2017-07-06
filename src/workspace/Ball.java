@@ -26,4 +26,14 @@ public class Ball extends Entity implements Ender{
         }
         return false;
     }
+    
+    public Reaction collidedWith(Entity input) {
+        if (input instanceof Paddle) {
+            return Reaction.DEFLECT;
+        }
+        if (input instanceof Border) {
+            return Reaction.DEFLECT;
+        }
+        return Reaction.AGREE;
+    }
 }
