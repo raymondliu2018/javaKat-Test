@@ -25,6 +25,7 @@ public class Paddle extends Entity {
     }
     
     public Reaction collidedWith(Entity input) {
+        System.out.println(input);
         if (input instanceof Ball) {
             return Reaction.REFLECT;
         }
@@ -33,6 +34,5 @@ public class Paddle extends Entity {
         }
         return Reaction.AGREE;
     }
-    
 }
     
