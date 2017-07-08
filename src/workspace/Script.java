@@ -50,7 +50,7 @@ public class Script implements SuperScript {
         top.getRect().setCornerY(-top.getRect().getHeight());
         
         Border bot = new Border();
-        bot.getRect().setCornerY(bot.getRect().getHeight());
+        bot.getRect().setCornerY(GameMaster.getHeight());
         
     }
     

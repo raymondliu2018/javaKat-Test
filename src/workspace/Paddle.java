@@ -11,13 +11,14 @@ public class Paddle extends Entity {
         album.setMovementMode(MovementMode.BY_RECT);
         
         bindCodeToAction("up",
-                (a) -> {rect.offsetYVelocityBy(-5.0);},
-                (a) -> {rect.offsetYVelocityBy(5.0);});
+                (a) -> {rect.offsetYAccelerationBy(-5.0);},
+                (a) -> {rect.offsetYAccelerationBy(5.0);});
                 
         bindCodeToAction("down",
-                (a) -> {rect.offsetYVelocityBy(5.0);},
-                (a) -> {rect.offsetYVelocityBy(-5.0);});
-        
+                (a) -> {rect.setYAcceleration(5.0);},
+                (a) -> {rect.offsetYAccelerationBy(-5.0);});
+        rect.setMaxYSpeed(5.0);
+        rect.setFriction(5.0);
         resizeByCenter(album.getCurrentPageWidth(),album.getCurrentPageHeight());
     }
     

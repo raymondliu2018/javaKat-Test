@@ -4,7 +4,7 @@ import javaKat.*;
 public class Border extends Entity{
     public Border() {
         super();
-        rect.setSize(GameMaster.getWidth(), 10);
+        rect.setSize(GameMaster.getWidth(), 50);
         rect.setCornerX(0.0);
     }
     public void subUpdate() {

@@ -11,6 +11,7 @@ public class Ball extends Entity implements Ender{
         album.setPage("main");
         album.setMovementMode(MovementMode.BY_RECT);
         resizeByCenter(album.getCurrentPageWidth(), album.getCurrentPageHeight());
+        rect.offsetVelocityBy(-5, -5);
     }
     
     public void subUpdate(){
